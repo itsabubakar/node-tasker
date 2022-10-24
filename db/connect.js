@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-const connectionString = "mongodb+srv://seeker:blackwolf99157@cluster0.5ncyljk.mongodb.net/TASK-MANAGER?retryWrites=true&w=majority"
+
 
 const connectDB = (url) => {
     return mongoose
-        .connect(connectionString, {
+        .connect(url, {
             useNewUrlParser: true,
             useCreateIndex: true,
             useFindAndModify: false,
@@ -12,4 +12,4 @@ const connectDB = (url) => {
         })
 }
 
-module.exports = connectDB
+module.exports = connectDB;
